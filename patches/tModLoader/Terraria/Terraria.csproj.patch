@@ -1,6 +1,6 @@
 --- src/TerrariaNetCore/Terraria/Terraria.csproj
 +++ src/tModLoader/Terraria/Terraria.csproj
-@@ -11,59 +_,86 @@
+@@ -11,59 +_,89 @@
  		<Company>Re-Logic</Company>
  		<Copyright>Copyright © 2022 Re-Logic</Copyright>
  		<RootNamespace>Terraria</RootNamespace>
@@ -13,6 +13,7 @@
 -		<AssemblyName Condition="$(Configuration.Contains('Debug'))">$(AssemblyName)Debug</AssemblyName>
 -		<AssemblyName Condition="!$(Configuration.Contains('Debug'))">$(AssemblyName)Release</AssemblyName>
  		<OutputName>$(AssemblyName)</OutputName>
++		<Configurations>Debug;Release;WindowsDebug</Configurations>
  	</PropertyGroup>
  
  	<!-- Build Configuration -->
@@ -60,6 +61,8 @@
 +		<Reference Include="TerrariaHooks" />
  
 +		<PackageReference Include="DotNetZip" Version="1.16.0" />
++
++		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.9.2" />
  		<PackageReference Include="Steamworks.NET" Version="20.1.0" />
 +		<PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.5.0" />
 +		<PackageReference Include="MonoMod.RuntimeDetour" Version="25.1.0" />

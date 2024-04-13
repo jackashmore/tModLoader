@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Terraria.ModLoader</RootNamespace>
+    <Configurations>Debug;Release;WindowsDebug</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Test Local\**;*Performance\**" />
@@ -9,6 +10,7 @@
     <None Remove="Test Local\**;*Performance\**" />
   </ItemGroup>
   <ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.9.2" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
 		<PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
 		<PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
